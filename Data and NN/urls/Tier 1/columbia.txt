@@ -1,0 +1,14 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/columbia-university/2114919-columbia-class-of-2023-ed-results.html",
+"https://talk.collegeconfidential.com/columbia-university/2039160-columbia-class-of-2022-ed-results.html",
+"https://talk.collegeconfidential.com/columbia-university/2070141-official-columbia-university-class-of-2022-regular-decision-results-only.html",
+"https://talk.collegeconfidential.com/columbia-university/1975653-official-columbia-university-class-of-2021-regular-decision-results-only.html",
+"https://talk.collegeconfidential.com/columbia-university/1943963-columbia-class-of-2021-ed-results.html", 
+"https://talk.collegeconfidential.com/columbia-university/1876676-columbia-university-class-of-2020-rd-results.html",
+"https://talk.collegeconfidential.com/columbia-university/1827281-columbia-class-of-2020-ed-results.html",
+"https://talk.collegeconfidential.com/columbia-university/1752936-columbia-university-class-of-2019-results.html",
+"https://talk.collegeconfidential.com/columbia-university/1713743-columbia-class-of-2019-e-d-results-only.html",
+"https://talk.collegeconfidential.com/columbia-university/2134076-columbia-rd-class-of-2023-results-only.html"
+]
+COLLEGE_STATE_NAME = 'New York
+COLLEGE_STATE_ABBR = 'NY'

@@ -1,0 +1,15 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/cornell-university/1749631-official-cornell-university-class-of-2019-regular-decision-results-only.html",
+"https://talk.collegeconfidential.com/cornell-university/1713310-offical-class-of-2019-ed-results-only.html",
+"https://talk.collegeconfidential.com/cornell-university/1867304-cornell-class-of-2020-rd-results-only.html",
+"https://talk.collegeconfidential.com/cornell-university/1835971-cornell-class-of-2020-ed-results-only.html",
+"https://talk.collegeconfidential.com/cornell-university/1940785-cornell-ed-class-of-2021-results-p1.html",
+"https://talk.collegeconfidential.com/cornell-university/1977671-cornell-rd-class-of-2021-results.html",
+"https://talk.collegeconfidential.com/cornell-university/1962789-official-cornell-university-class-of-2021-regular-decision-results-only.html",
+"https://talk.collegeconfidential.com/cornell-university/2038991-cornell-ed-class-of-2022-results.html",
+"https://talk.collegeconfidential.com/cornell-university/2070903-cornell-rd-class-of-2022-results.html",
+"https://talk.collegeconfidential.com/cornell-university/2134011-cornell-rd-class-of-2023-results-only.html",
+"https://talk.collegeconfidential.com/cornell-university/2113776-cornell-ed-class-of-2023-results.html"
+]
+COLLEGE_STATE_NAME = 'New York'
+COLLEGE_STATE_ABBR = 'NY'

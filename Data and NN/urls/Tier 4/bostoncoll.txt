@@ -1,0 +1,10 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/boston-college/1871029-boston-college-class-of-2020-rd-results-only.html",
+"https://talk.collegeconfidential.com/boston-college/1842019-official-boston-college-ea-class-of-2020-results-thread.html",
+"https://talk.collegeconfidential.com/boston-college/1972561-boston-college-class-of-2021-rd-results-only.html",
+"https://talk.collegeconfidential.com/boston-college/1944445-official-boston-college-class-of-2021-rea-results-thread.html",
+"https://talk.collegeconfidential.com/boston-college/2040417-boston-college-ea-class-of-2022-results.html",
+"https://talk.collegeconfidential.com/boston-college/2115185-boston-college-rd-2023.html"
+]
+COLLEGE_STATE_NAME = 'Massachusetts'
+COLLEGE_STATE_ABBR = 'MA'

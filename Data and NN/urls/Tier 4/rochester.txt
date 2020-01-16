@@ -1,0 +1,11 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/university-rochester/1743310-rochester-2019-rd-results-only-thread.html",
+"https://talk.collegeconfidential.com/university-rochester/1865409-university-of-rochester-rd-class-of-2020-decisions.html",
+"https://talk.collegeconfidential.com/university-rochester/1838992-university-of-rochester-ed-class-of-2020.html",
+"https://talk.collegeconfidential.com/university-rochester/1941648-university-of-rochester-class-of-2021-regular-decision-discussion.html",
+"https://talk.collegeconfidential.com/university-rochester/1930140-university-of-rochester-class-of-2021-early-decision-thread.html",
+"https://talk.collegeconfidential.com/university-rochester/1838992-university-of-rochester-ed-class-of-2020.html",
+"https://talk.collegeconfidential.com/university-rochester/1865409-university-of-rochester-rd-class-of-2020-decisions.html"
+]
+COLLEGE_STATE_NAME = 'New York'
+COLLEGE_STATE_ABBR = 'NY'

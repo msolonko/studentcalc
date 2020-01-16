@@ -1,0 +1,11 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/rice-university/1754474-rice-university-class-of-2019-results-decisions.html",
+"https://talk.collegeconfidential.com/rice-university/1704925-rice-ed-class-of-2019-results-official-thread.html",
+"https://talk.collegeconfidential.com/rice-university/1823896-rice-university-ed-class-of-2020-official-thread.html",
+"https://talk.collegeconfidential.com/rice-university/1977659-official-rice-class-of-2021-regular-decision-results-only.html",
+"https://talk.collegeconfidential.com/rice-university/2066631-rice-class-of-2022-rd-results.html",
+"https://talk.collegeconfidential.com/rice-university/2133687-rice-rd-class-of-2023-results-only.html",
+"https://talk.collegeconfidential.com/rice-university/2109973-rice-university-class-of-2023-rd-thread.html"
+]
+COLLEGE_STATE_NAME = 'Texas'
+COLLEGE_STATE_ABBR = 'TX'

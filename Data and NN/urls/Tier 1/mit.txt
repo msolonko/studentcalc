@@ -1,0 +1,13 @@
+URL_LIST = ["https://talk.collegeconfidential.com/massachusetts-institute-technology/2111642-mit-class-of-2023-discussion-decisions.html",
+"https://talk.collegeconfidential.com/massachusetts-institute-technology/2116066-mit-ea-2023-results.html",
+"https://talk.collegeconfidential.com/massachusetts-institute-technology/2040000-mit-class-of-2022-ea-results-thread.html",
+"https://talk.collegeconfidential.com/massachusetts-institute-technology/2063828-official-mit-rd-results-class-of-2022.html",
+"https://talk.collegeconfidential.com/massachusetts-institute-technology/1962774-official-mit-rd-results-discussion-class-of-2021.html",
+"https://talk.collegeconfidential.com/massachusetts-institute-technology/1944289-mit-ea-results-discussion-class-of-2021.html",
+"https://talk.collegeconfidential.com/massachusetts-institute-technology/1870162-mit-class-of-2020-rd-results-thread.html",
+"https://talk.collegeconfidential.com/massachusetts-institute-technology/1841817-mit-class-of-2020-ea-results-thread.html",
+"https://talk.collegeconfidential.com/massachusetts-institute-technology/1751457-mit-class-of-2019-rd-results-thread.html",
+"https://talk.collegeconfidential.com/massachusetts-institute-technology/1717092-mit-class-of-2019-ea-results-thread.html"
+]
+COLLEGE_STATE_NAME = 'Massachusetts'
+COLLEGE_STATE_ABBR = 'MA'

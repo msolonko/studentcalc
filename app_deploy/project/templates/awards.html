@@ -1,0 +1,308 @@
+{% extends 'dashboard_base.html' %}
+{% block title %}Honors & Award Calculator{% endblock %}
+{% block styling %}
+    <style>
+      .number{
+        font-size: calc(1.8vw + 1.5vh);
+        vertical-align: middle;
+        margin: 3px;
+        font-family: 'PT Mono', monospace;
+      }
+      .entry{
+        margin: 5px;
+      }
+      .major{
+        margin: 5px;
+        width: 18px;
+        height: 18px;
+        position: relative;
+        top: 5px;
+        cursor: pointer;
+      }
+      .custom-select{
+        min-width: 210px;
+        max-width: 210px;
+        overflow: hidden;
+      }
+      #instructions{
+        font-size: calc(0.8em + 0.9vw);
+        text-align: left;
+      }
+      #heading{
+        text-align:left;
+        font-size: calc(1.5em + 1.4vw);
+      }
+      #calc{
+        background-color: #caebf2;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+        margin:0;
+        padding:15px;
+      }
+      #info{
+        text-align: left;
+        font-size: calc(0.8em + 0.8vw);
+      }
+      #more{
+        font-size: calc(1.4em + 1.3vw);
+      }
+      #resultText{
+        text-align:left;
+      }
+      #disclaimer{
+        margin: 20px auto 0;
+        font-size: calc(0.7em + 0.7vw);
+        text-align: left;
+        color: #353535;
+        border: 1px solid #ff3b3f;
+      }
+      .row{
+        margin-top: 10px;
+      }
+	  #alert{
+		display:none;
+	  }
+
+    </style>
+{% endblock %}
+   
+   
+{% block content %}
+    <!-- Modal Results -->
+      <div class="modal fade" id="result" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Your Results</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="resultText">
+              This is the body
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <!-- Modal Calculation -->
+      <div class="modal fade" id="how"tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Calculation</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Each category in this calculator is worth a certain number of points. The checkbox multiplies the point value of the entry by 1.5. Here are the point values without a multiplier:<br><br>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Category</th>
+                    <th scope="col">Points</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Not Selected</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>International</td>
+                    <td>16</td>
+                  </tr>
+                  <tr>
+                    <td>National</td>
+                    <td>8</td>
+                  </tr>
+                  <tr>
+                    <td>State</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>AP Award</td>
+                    <td>2-5</td>
+                  </tr>
+                  <tr>
+                    <td>National Merit</td>
+                    <td>2-4</td>
+                  </tr>
+                   <tr>
+                    <td>Local</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>National Honor Society</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>School</td>
+                    <td>1</td>
+                  </tr>
+                </tbody>
+              </table>
+              These values were chosen based on how common the award is for high school seniors as well as the difficulty of receiving one. For example, many high school seniors are part of NHS, so this award is less prestigious than a state award, for example. The total number of points corresponds to a type of college using the following ranges: 
+              <br><br><table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">College Type</th>
+                    <th scope="col">Range</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Community College</td>
+                    <td>0-3.99</td>
+                  </tr>
+                  <tr>
+                    <td>Public State University</td>
+                    <td>4-10.99</td>
+                  </tr>
+                  <tr>
+                    <td>Good Public or Private University</td>
+                    <td>11-17.99</td>
+                  </tr>
+                  <tr>
+                    <td>Elite University</td>
+                    <td>18+</td>
+                  </tr>
+                </tbody>
+              </table>
+              These ranges were chosen by analyzing the scores of a group of students and the colleges that they have been accepted to. Though not perfect, this calculator is a decent estimate of where your awards put you in the applicant pool.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-lg">
+          <h1 id="heading">
+            Award Evaluator
+          </h1>
+          <p id="instructions">
+            Having awards is important for showing colleges your achievements, especially in extracurricular activies. Like in the Common Application, you can enter up to 5 of your most significant awards. The calculator will output a type of college that fits you best based on your awards. Choose the category of award that fits best. Click the checkmark if this award directly relates to your anticipated major. 
+          </p>
+        </div>
+        <div class="col-lg">
+          <div id="calc">
+		  <div class="alert alert-warning"  id = "alert" role="alert">
+			Please enter at least one award. It does not have to be big!
+		 </div>
+              <h4>
+                Enter Awards Below
+              </h4>
+			  {% for i in range(5)%}
+			  <div class="entry">
+			  <span class="number">{{i+1}}</span>
+				 <select class="custom-select">
+				   <option value="0">Not Selected</option>
+				   <optgroup label="AP Awards">
+					 {% for object in ap_awards %}
+					<option value="{{ object.value }}" 
+					{% if user_awards|length > i and user_awards[i].award_type == object.value %}
+					selected
+					{% endif %}
+					>{{ object.name }}</option>
+					{% endfor %}
+				   </optgroup>
+				   <optgroup label="National Merit">
+					 {% for object in nmsc_awards %}
+					<option value="{{ object.value }}" 
+					{% if user_awards|length > i and user_awards[i].award_type == object.value %}
+					selected
+					{% endif %}
+					>{{ object.name }}</option>
+					{% endfor %}
+				   </optgroup>
+				   <optgroup label="Other">
+					 {% for object in generic_awards %}
+					<option value="{{ object.value }}" 
+					{% if user_awards|length > i and user_awards[i].award_type == object.value %}
+					selected
+					{% endif %}
+					>{{ object.name }}</option>
+					{% endfor %}
+				   </optgroup>
+				</select>
+				  <input type="checkbox" data-toggle='tooltip' data-placement='right' data-original-title="This award relates to my anticipated major" class="major"
+					{%if user_awards|length > i and user_awards[i].check%}
+					checked
+					{% endif %}
+				  />
+				</div>
+		{% endfor %}
+              <input class="btn btn-info btn-lg" id="submit" type="button" onclick="submit()" value="Submit">
+              <input type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#how" value="Details">
+          </div>
+        </div>
+      </div>
+      <div class="row" id="disclaimer">
+       <div class="col-lg">
+          Note that the output of this tool is a simplistic estimate that is only based on the award you have earned and does not consider grades, standardized test scores, and extracurriculars. For a more comprehensive evaluation, please check out our college admission calculator.
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-lg">
+        <h3 id="more">
+          More Information on Awards
+        </h3>
+          <p id="info">
+            For a student hoping to be accepted to some of the nation's best universities, having a range of awards is a must. Awards can who that a student wisely uses their time after school on other involvements, like sports, music, or volunteering. Awards vary vastly in prestige, so one national award can be quite different from another one. Still, every award shows dedication and success of a student.<br><br>Colleges look for a well-rounded class, but not necessarily well-rounded students. Thus, being well-rounded is great, but it is also wise to show colleges a focus in your extracurricular involvements. Thus, it is particularly impressive if a college sees an award in the area of your anticipated major. This shows that you have already explored that field and are decisive.<br><br>Even if you are not aiming for Ivy League level colleges, award can still help your application. A local or even a school award can be helpful in showing what is meaningful to you. <br><br>Just a note on academic awards (like AP or NHS): if you have more awards that space to list them, list academic awards last. Colleges can see your grades and AP scores (if you send them), so putting AP awards on your list is redundant. Showcase your extracurriculars instead. <br><br>For more information about honors and awards, check out <a href='https://blog.collegevine.com/reporting-honors-and-awards-in-the-common-app/'>this article</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+{% endblock %}
+    
+{% block script %}
+    <script>
+      //modal text
+      modal_text = ["<img src='{{community_college_img}}' class='img-fluid' alt='Community College Image'><br><br>According to the information you entered, we have determined that a <i>Community College</i> would be the best fit for you. These colleges are more affordable and generally offer 2-year associate's degrees. They are a great way for students to get an education without going into student debt. Students have the option to transfer to a 4-year college after 2 years of study.<br><br>This type of college can likely be found close in your community. Just do a google search. To learn more about these colleges, check out <a href='https://en.wikipedia.org/wiki/Community_college' target='_blank'>this link.</a>",
+                    "<img src='{{state_img}}' class='img-fluid' alt='State College Image'><br><br>According to the information you entered, we have determined that a <i>Public State University</i> would be the best fit for you. These colleges accept very large numbers of students per year. They also grant 4-year bachelor's degrees. Acceptance rates vary, but these are generally moderately selective, with acceptance rates above 40%. <br><br>Here are some examples of colleges in this category: <ul><li>Arizona State</li><li>Penn State</li><li>Purdue</li><li>Ohio State</li></ul>",
+                    "<img src='{{good_img}}' class='img-fluid' alt='Good Public or Private College Image'><br><br>According to the information you entered, we have determined that a <i>good public or private institution</i> would be the best fit for you. Congratulations, your awards make you competitive for very good institutions. These colleges are generally characterized by selective acceptance rates (about 20% to 40%).<br><br>Here are some examples of colleges in this category:<ul><li>UC San Diego</li><li>University of Michigan</li><li>Case Western Reserve</li><li>New York University</li></ul>",
+                    "<img src='{{elite_img}}' class='img-fluid' alt='Elite College Image'><br><br>Nice! According to the information you entered, we have determined that an <i>Elite University</i> would be the best fit for you. These types of universities are known around the world. Although they are the most expensive, they generally offer very generous need-based financial aid. The acceptance rates for such colleges are usually below 20% and more often below 10%.<br><br>Here are some examples of colleges in this category:<ul><li>Stanford</li><li>Yale</li><li>MIT</li><li>Northwestern</li></ul>To see a more comprehensive list, go <a href='https://www.usnews.com/best-colleges/rankings/national-universities' target='_blank'>here</a>."];
+	  more_details_text = "<br><br>Once you finish completing all the steps in your dashboard, you will be able to see more detailed analysis of everything you have entered, including your awards.";
+      $(document).ready(function(){
+        $("[data-toggle='tooltip']").tooltip(); //activates tooltip
+      });
+      
+      function submit(){
+        //gets called upon submission
+        var mult_list = [];
+        var award_list = [];
+        var award_id_sum = 0;
+        //data is read and saved into arrays
+        $(".custom-select").each(function(i) {
+          mult_list.push($(this).next().prop('checked') ? 1.5: 1.0);
+          award_list.push(parseFloat($(this).val()));
+		  award_id_sum += parseFloat($(this).val())
+        });
+		if(award_id_sum != 0){
+		$("#alert").hide();
+         $.ajax({
+            type: 'POST',
+            url: 'process_awards',
+            data: {award: award_list, mult: mult_list}
+          })
+            .done(function(data) {
+               //server returns index for modal inner html
+               $("#resultText").html(modal_text[data["result"]] + more_details_text);
+			   $('#result').modal();
+            });
+		}
+		else{
+			$("#alert").show();
+		}
+       }
+    </script>
+{% endblock %}

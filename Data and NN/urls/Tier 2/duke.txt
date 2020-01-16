@@ -1,0 +1,14 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/duke-university/1755538-official-duke-2019-rd-results-only-thread.html",
+"https://talk.collegeconfidential.com/duke-university/1714877-official-duke-2019-ed-results-only-thread.html",
+"https://talk.collegeconfidential.com/duke-university/1872765-duke-university-rd-2020-results-thread.html",
+"https://talk.collegeconfidential.com/duke-university/1837158-official-duke-2020-ed-results-only-thread.html",
+"https://talk.collegeconfidential.com/duke-university/1977392-official-duke-rd-class-of-2021-results-thread.html",
+"https://talk.collegeconfidential.com/duke-university/1945126-official-duke-2021-ed-results-only-thread.html",
+"https://talk.collegeconfidential.com/duke-university/2040394-duke-ed-results-class-of-2022.html",
+"https://talk.collegeconfidential.com/duke-university/2069046-duke-class-of-2022-results.html",
+"https://talk.collegeconfidential.com/duke-university/2134134-duke-rd-class-of-2023-results-only.html",
+"https://talk.collegeconfidential.com/duke-university/2115574-duke-class-of-2023-ed-results.html"
+]
+COLLEGE_STATE_NAME = 'North Carolina'
+COLLEGE_STATE_ABBR = 'NC'

@@ -1,0 +1,544 @@
+{% extends 'dashboard_base.html' %}
+ {% block title %}Extracurricular Evaluator{% endblock %}
+{% block styling %}
+    <style>
+      .entry{
+        margin: 5px;
+      }
+      #instructions{
+        font-size: calc(0.8em + 0.9vw);
+        text-align: left;
+      }
+      #heading{
+        text-align:left;
+        font-size: calc(1.5em + 1.4vw);
+      }
+
+      #calc-col{
+        background-color: #caebf2;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+        margin:0;
+        padding:15px;
+      }
+      #info{
+        text-align: left;
+        font-size: calc(0.8em + 0.8vw);
+      }
+      #more{
+        font-size: calc(1.4em + 1.3vw);
+      }
+      #resultText{
+        text-align:left;
+      }
+      #disclaimer{
+        margin: 20px auto 0;
+        font-size: calc(0.7em + 0.7vw);
+        text-align: left;
+        color: #353535;
+        border: 1px solid #ff3b3f;
+      }
+      .row{
+        margin-top: 10px;
+      }
+
+      
+      .modalInput {
+        padding: 10px;
+        width: 100%;
+        font-size: 17px;
+        border: 1px solid #aaaaaa;
+      }
+
+      /* Mark input boxes that gets an error on validation: */
+      input.invalid, select.invalid {
+        background-color: #ffdddd;
+      }
+
+      /* Hide all steps by default: */
+      .tab {
+        display: none;
+      }
+
+      button {
+        background-color: #4CAF50;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 17px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        opacity: 0.8;
+      }
+
+      #prevBtn {
+        background-color: #bbbbbb;
+      }
+      .page-heading{
+        font-size: calc(1em + 0.5vw);
+      }
+      .activity{
+        background-color: #dddddd;
+        border: black solid 1px;
+        border-radius: 5px;
+        display: table;
+        padding: 7px;
+        margin: 7px auto;
+        overflow: auto;
+      }
+      
+      .activityName{
+        display:table-cell;
+        vertical-align:middle;
+        font-size: calc(0.8em + 0.4vw);
+        min-width: calc(70px + 13vw);
+        max-width: calc(70px + 13vw);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .editButtons{
+        float: right;
+      }
+      
+      .activityButtons{
+        margin: 1px;
+        padding: 3px 6px 3px 6px;
+      }
+      
+      .mainButtons{
+        margin: 2px;
+      }
+	  #alert{
+		display:none;
+	  }
+    </style>
+{% endblock %}
+
+{% block content %}
+    
+<!-- Saved activity icon -->
+<template id="activityTemplate">
+  <div class="activity">
+    <span class="activityName">
+    </span>
+    <div class="editButtons">
+      <button type="button" class="activityButtons btn btn-sm btn-success editActivity">
+        Edit
+      </button>
+      <button type="button" class="activityButtons btn btn-sm btn-danger deleteActivity">
+        Delete
+      </button>
+    </div>
+  </div>
+ </template>
+    
+<!-- Modal Results -->
+      <div class="modal fade" id="result" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Your Results</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="resultText">
+              This is the body
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+<!-- Extracurricular Modal -->
+<div class="modal fade" id="entryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-keyboard = "false" data-backdrop="static" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Extracurricular Details</h5>
+        <button type="button" class="close" onclick = "closeModal()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="form">
+        <!-- One "tab" for each step in the form: -->
+	  <div class="tab">
+		<p class="page-heading">
+		  General Information
+		</p>
+		<input class="modalInput" placeholder="Activity Name" id="name" oninput="this.className = 'modalInput'">
+		<select class="custom-select" id="typeSelect" oninput="this.className = 'custom-select'">
+			<option value="-5" selected>Not Selected</option>
+			<option value="1">Community Service</option>
+			<option value="2">Work / Internship / Research</option>
+			<option value="3">Art / Music / Performace</option>
+			<option value="4">Sport</option>
+			<option value="5">Academic / School Club</option>
+			<option value="6">Other</option>
+		 </select>
+	  </div>
+	  <div class="tab">
+		<p class="page-heading">
+		  Value
+		</p>
+		On top of the type of activity, colleges also look at any demonstrated leadership and impact that your participation had. <hr>Leadership can be shown in a few ways:
+		<ul>
+		  <li>Holding a leadership position (President, Captain, Secretary, etc.)</li>
+		  <li>Taking initiative and doing something new, like planning an event</li>
+		  <li>Generally managing other people</li>
+		</ul>
+		<hr>
+		Based on this description, would you say you showed <b>leadership</b> in your activity?
+		<select class="custom-select" id="leaderSelect" oninput="this.className = 'custom-select'">
+			<option value="-5" selected>Not Selected</option>
+			<option value="2">Yes</option>
+			<option value="1">No</option>
+		</select>
+		
+		<hr>Impact is your contribution to your selected activity. Here are some examples:
+		<ul>
+		  <li>Raised $2000 for cancer research</li>
+		  <li>Developed an iOS application used by hundreds of users</li>
+		  <li>By introducing new physical exercise into the normal routine, the soccer team won the state championship</li>
+		</ul>
+		<hr>
+		Based on this desription, would you say your efforts resulted in a <b>significant impact</b> in your activity?
+		<select class="custom-select" id="impactSelect" oninput="this.className = 'custom-select'">
+			<option value="-5" selected>Not Selected</option>
+			<option value="1.5">Yes</option>
+			<option value="1">No</option>
+		 </select>
+	  </div>
+	  <div class="tab">
+			<p class="page-heading">
+			  Time Commitment
+			</p>
+			Colleges like seeing serious involvement and dedication to extracurricular activies. Thus, activities that you spend a lot of time on are more important than those you do less frequently. The following questions will determine your time commitment to this activity.
+			<hr>
+			By the end of senior year, how many years will you have participated in this activity?
+			<select class="custom-select" id="yearSelect" oninput="this.className = 'custom-select'">
+				<option value="-5" selected>Not Selected</option>
+				<option value="0">1</option>
+				<option value="0.2">2</option>
+				<option value="0.5">3</option>
+				<option value="0.7">4+</option>
+			 </select>
+			<hr>
+			How many weeks per year do you participate in this activity (1-52)?
+			<input class="modalInput" type="number" id="weeks" oninput="this.className = 'modalInput'"
+			   min="1" max="52" step="1">
+			<hr>
+			During those weeks, how many hours, on average, do you dedicate toward this activity per week?
+			<select class="custom-select" id="hourSelect" oninput="this.className = 'custom-select'">
+				<option value="-5" selected>Not Selected</option>
+				<option value="0">0-2</option>
+				<option value="0.3">3-5</option>
+				<option value="0.5">6+</option>
+			 </select>
+		</div>
+		  </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
+     <div class="container text-center">
+      <div class="row">
+        <div class="col-lg">
+          <h1 id="heading">
+            Extracurricular Activity Evaluator
+          </h1>
+          <p id="instructions">
+            Pursuing a range of extracurricular activities is important for showing colleges your passions and personality traits. In the Common Application, you can enter up to 10 activities. Here, you can only enter up to 5 of your most meaningful activities. We did this to emphasize quality over quantity when it comes to extracurricular activities. The calculator will output a type of college that fits you best based on the activities you enter. 
+          </p>
+        </div>
+        <div class="col-lg" id="calc-col">
+          <div id="calc">
+		  <div class="alert alert-warning"  id = "alert" role="alert">
+			Please enter at least one extracurricular activity. For example, helping your parents on your farm counts as an activity.
+		 </div>
+              <h4>
+                Enter Activities Below
+              </h4>
+              <div id="calcButtons">
+                  <input class="btn btn-info btn-lg mainButtons" id="add" type="button" onclick="addActivity()" value="Add Activity">
+                  <input class="btn btn-info btn-lg mainButtons" id="submit" type="button" onclick="submit()" value="Submit">
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="disclaimer">
+       <div class="col-lg">
+          Note that the output of this tool is a simplistic estimate that is only based on your extracurriculars and does not consider grades, standardized test scores, and awards. For a more comprehensive evaluation, please check out our college admission calculator.
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-lg">
+        <h3 id="more">
+          More Information on Extracurricular Activities
+        </h3>
+          <p id="info">
+            For a student hoping to be accepted to some of the nation's best universities, showing leadership, impact, and dedication in extracurricular activities is crucial. This is because colleges do not want to accept students who dedicate all of their time to academics. Instead, they want students who are motivated to pursue their own interests outside of school. 
+            <br><br>If you are a student and are unsure where to start regarding finding extracurricular activities to do, the best place to look for is your school. Schools, especially high schools, have many clubs and sports teams that any student can participate in. Another good place to look is a local library. Libraries often have tutoring programs where you can help other students with their homework. Overall, the best place to look is in your community.
+            <br><br>Once you have solid extracurricular activities, you want to seriously engage with them. Top colleges want you to make a difference on their campuses and after graduation, so you are expected to show leadership and make a difference in at least some of your extracurricular activities. You can hold a leadership role or organize an event. For impact, you can raise money or create a project that wins an award. There are many possibilities, so anyone can find an activity that they are good at and will be successful at.
+            <br><br>For more information on this topic, check out <a href="https://blog.prepscholar.com/best-extracurricular-activities-for-college">this useful article</a> that emphasizes many of the ideas you read about here.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+{% endblock %}
+
+
+{% block script %}
+<script>
+	modal_text = ["<img src='{{community_college_img}}' class='img-fluid' alt='Community College Image'><br><br>According to the information you entered, we have determined that a <i>Community College</i> would be the best fit for you. These colleges are more affordable and generally offer 2-year associate's degrees. They are a great way for students to get an education without going into student debt. Students have the option to transfer to a 4-year college after 2 years of study.<br><br>This type of college can likely be found close in your community. Just do a google search. To learn more about these colleges, check out <a href='https://en.wikipedia.org/wiki/Community_college' target='_blank'>this link.</a>",
+				  "<img src='{{state_img}}' class='img-fluid' alt='Community College Image'><br><br>According to the information you entered, we have determined that a <i>Public State University</i> would be the best fit for you. These colleges accept very large numbers of students per year. They also grant 4-year bachelor's degrees. Acceptance rates vary, but these are generally moderately selective, with acceptance rates above 40%. <br><br>Here are some examples of colleges in this category: <ul><li>Arizona State</li><li>Penn State</li><li>Purdue</li><li>Ohio State</li></ul>",
+				  "<img src='{{good_img}}' class='img-fluid' alt='Community College Image'><br><br>According to the information you entered, we have determined that a <i>good public or private institution</i> would be the best fit for you. Congratulations, your extracurricular activities make you competitive for very good institutions. These colleges are generally characterized by selective acceptance rates (about 20% to 40%).<br><br>Here are some examples of colleges in this category:<ul><li>UC San Diego</li><li>University of Michigan</li><li>Case Western Reserve</li><li>New York University</li></ul>",
+				  "<img src='{{elite_img}}' class='img-fluid' alt='Community College Image'><br><br>Nice! According to the information you entered, we have determined that an <i>Elite University</i> would be the best fit for you. These types of universities are known around the world. Although they are the most expensive, they generally offer very generous need-based financial aid. The acceptance rates for such colleges are usually below 20% and more often below 10%.<br><br>Here are some examples of colleges in this category:<ul><li>Stanford</li><li>Yale</li><li>MIT</li><li>Northwestern</li></ul>To see a more comprehensive list, go <a href='https://www.usnews.com/best-colleges/rankings/national-universities' target='_blank'>here</a>."];
+	more_details_text = "<br><br>Once you finish completing all the steps in your dashboard, you will be able to see more detailed analysis of everything you have entered, including your awards.";
+	var currentTab = 0; // Current tab is set to be the first tab (0)
+	showTab(currentTab); // Display the current tab
+	var activities = [];
+
+	$.ajax({
+		type: 'POST',
+		url: 'activities',
+		data: {"message":"getSaved"}
+	})
+	.done(function(data) {
+		a = data["activities"];
+		for(var i = 0; i < a.length; i++){
+			activities.push(new Activity(a[i]['name'], a[i]['type'], a[i]['leadership'], a[i]['impact'], a[i]['years'], a[i]['weeks'], a[i]['hours']));
+		}
+		showSavedActivities();
+	});
+			
+	var EDIT_INDEX = -1;
+
+	$(document.body).on("click", ".deleteActivity", function() {
+	  var index = $(".deleteActivity").index($(this));
+	  $(this).parent().parent().remove();
+	  activities.splice(index, 1);
+	  if(activities.length == 4){
+		$("#add").show();
+	  }
+	});
+
+	  
+	$(document.body).on("click", ".editActivity", function() {
+	  EDIT_INDEX = $(".editActivity").index($(this));
+	  oldModal();
+	  $('#entryModal').modal();
+	});
+	  
+	function showTab(n) {
+	  // This function will display the specified tab of the form...
+	  $('.tab').hide(); // hides
+	  $('.tab').eq(n).show();
+	  //... and fix the Previous/Next buttons:
+	  if (n == 0) {
+		document.getElementById("prevBtn").style.display = "none";
+	  } else {
+		document.getElementById("prevBtn").style.display = "inline";
+	  }
+	  if (n == ($('.tab').length - 1)) {
+		document.getElementById("nextBtn").innerHTML = "Submit";
+	  } else {
+		document.getElementById("nextBtn").innerHTML = "Next";
+	  }
+	}
+
+	function nextPrev(n) {
+	  // Exit the function if any field in the current tab is invalid:
+	  if (n == 1 && !validateForm()) return false;
+	  // Hide the current tab:
+	  // Increase or decrease the current tab by 1:
+	  currentTab = currentTab + n;
+	  // if you have reached the end of the form...
+	  if(currentTab >=3){
+		$('#entryModal').modal('hide')
+		saveActivity();
+		resetModal();
+		return false;
+	  }
+	  // Otherwise, display the correct tab:
+	  showTab(currentTab);
+	}
+
+	function addActivity(){
+		$('#entryModal').modal();
+		EDIT_INDEX = -1;
+	}
+	  
+	function validateForm() {
+	  // This function deals with validation of the form fields
+	  var x, y, i, valid = true;
+	  
+	  //for quick select validation
+	  function validateSelect(id, ct){
+		if(currentTab == ct && document.getElementById(id).value == -5){
+		  $("#"+id).addClass("invalid");
+		  valid = false;
+		}
+	  }
+	  
+	  x = document.getElementsByClassName("tab");
+	  y = x[currentTab].getElementsByTagName("input");
+	  // A loop that checks every input field in the current tab:
+	  for (i = 0; i < y.length; i++) {
+		// If a field is empty...
+		if (y[i].value == "") {
+		  // add an "invalid" class to the field:
+		  y[i].className += " invalid";
+		  // and set the current valid status to false
+		  valid = false;
+		}
+	  }
+	  if(currentTab == 2){
+		if(document.getElementById("weeks").value > 52 || document.getElementById("weeks").value < 1){
+		  valid = false;
+		  $("#weeks").addClass("invalid");
+		}
+	  }
+	  validateSelect("typeSelect", 0);
+	  validateSelect("leaderSelect", 1);
+	  validateSelect("impactSelect", 1);
+	  validateSelect("yearSelect", 2);
+	  validateSelect("hourSelect", 2);
+	  return valid; // return the valid status
+	}
+
+	function saveActivity(){
+	  //adds a new activity into a list
+	  var activity = new Activity($("#name").val(), $("#typeSelect").val(), $("#leaderSelect").val(), $("#impactSelect").val(), $("#yearSelect").val(), $("#weeks").val(), $("#hourSelect").val());
+	  if(EDIT_INDEX == -1){
+		activities.push(activity);
+		var template = document.getElementById("activityTemplate");
+		var clon = template.content.cloneNode(true);
+		clon.querySelector(".activityName").innerHTML = activities[activities.length-1].name;
+		document.getElementById("calc").insertBefore(clon, document.getElementById("calcButtons"));
+		if(activities.length == 5){
+		  $("#add").hide();
+		}
+	  }
+	  else{
+		activities[EDIT_INDEX] = activity;
+		document.getElementsByClassName("activityName")[EDIT_INDEX].innerHTML = activity.name;
+		resetModal();
+	  }
+	}
+	  
+	function resetModal(){
+	   function removeClasses() {
+		  els[0].classList.remove('invalid')
+		  if (els[0]) removeClasses()
+		}
+	  var els = document.getElementsByClassName('invalid')
+	  if(els.length > 0){
+		removeClasses();
+	  }
+	  currentTab = 0;
+
+	  showTab(currentTab);
+	  $("#form").trigger("reset");
+	}
+	class Activity {
+	  constructor(name, type, leader, impact, years, weeks, hours) {
+		this.name = name;
+		this.type = parseFloat(type);
+		this.leader = parseFloat(leader);
+		this.impact = parseFloat(impact);
+		this.years = parseFloat(years);
+		this.weeks = parseFloat(weeks);
+		this.hours = parseFloat(hours);
+	  }
+	}
+		 
+	  function oldModal(){
+		function update(id, value){
+		  $("#"+id).val(value);
+		}
+		resetModal();
+		var activity = activities[EDIT_INDEX];
+		update("name", activity.name);
+		update("typeSelect", activity.type);
+		update("leaderSelect", activity.leader);
+		update("impactSelect", activity.impact);
+		update("yearSelect", activity.years);
+		update("weeks", activity.weeks);
+		update("hourSelect", activity.hours);
+	  }
+	  
+	  function closeModal(){
+		$('#entryModal').modal('hide');
+		resetModal();
+	  }
+	  
+	  function submit(){
+	  if(activities.length > 0){
+			$("#alert").hide();
+			var toSend = [];
+			for(var i = 0; i<activities.length; i++){
+			  toSend.push(JSON.stringify(activities[i])); 
+			}
+			$.ajax({
+				type: 'POST',
+				dataType: 'json',
+				contentType: 'application/json',
+				url: 'process_activities',
+				data: JSON.stringify(toSend)
+			})
+			.done(function(data) {
+				//server returns index for modal inner html
+				$("#resultText").html(modal_text[data["result"]] + more_details_text);
+				$('#result').modal();
+				console.log(data["points"]);
+			});
+		}
+		else{
+			$("#alert").show();
+		}
+	  }
+
+	 function showSavedActivities(){
+		for(var i = 0; i < activities.length; i++){
+			var template = document.getElementById("activityTemplate");
+			var clon = template.content.cloneNode(true);
+			clon.querySelector(".activityName").innerHTML = activities[i].name;
+			document.getElementById("calc").insertBefore(clon, document.getElementById("calcButtons"));
+			if(activities.length == 5){
+			  //cannot add more than 5 activities
+			  $("#add").hide();
+			}
+		}
+	 }
+		  
+	//for quick activity addition press '`'   ***TESTING***    
+	/*document.addEventListener('keydown', (event) => {
+	  const keyName = event.key;
+	  if(event.key=='`'){
+		  if(activities.length<5){
+			activities.push(new Activity("Activity", 2, 1, 1, 2, 5, 4));
+		  var template = document.getElementById("activityTemplate");
+		  var clon = template.content.cloneNode(true);
+		  clon.querySelector(".activityName").innerHTML = activities[activities.length-1].name;
+		  document.getElementById("calc").insertBefore(clon, document.getElementById("calcButtons"));
+		  if(activities.length == 5){
+			$("#add").hide();
+		  }
+		}
+	  }
+	}, false);*/
+</script>
+{% endblock %}

@@ -1,0 +1,15 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/johns-hopkins-university/1717635-johns-hopkins-class-of-2019-results-ed.html",
+"https://talk.collegeconfidential.com/johns-hopkins-university/1753137-official-johns-hopkins-university-class-of-2019-rd-results.html",
+"https://talk.collegeconfidential.com/johns-hopkins-university/1837647-official-johns-hopkins-2020-ed-results.html",
+"https://talk.collegeconfidential.com/johns-hopkins-university/1871313-johns-hopkins-university-rd-2020-results-thread.html",
+"https://talk.collegeconfidential.com/johns-hopkins-university/1970639-official-johns-hopkins-2021-rd-results-only.html",
+"https://talk.collegeconfidential.com/johns-hopkins-university/1972922-johns-hopkins-class-of-2021-rd-results-only.html",
+"https://talk.collegeconfidential.com/johns-hopkins-university/1942783-johns-hopkins-2021-ed-decision-thread.html",
+"https://talk.collegeconfidential.com/johns-hopkins-university/2038852-johns-hopkins-ed-2022-results-only-thread.html",
+"https://talk.collegeconfidential.com/johns-hopkins-university/2064371-johns-hopkins-rd-class-of-2022-results-only.html",
+"https://talk.collegeconfidential.com/johns-hopkins-university/2116047-jhu-class-of-2023-ed-results-only.html",
+"https://talk.collegeconfidential.com/johns-hopkins-university/2131144-johns-hopkins-rd-class-of-2023-results-only.html"
+]
+COLLEGE_STATE_NAME = 'Maryland'
+COLLEGE_STATE_ABBR = 'MD'

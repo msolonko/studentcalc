@@ -1,0 +1,16 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/university-chicago/1748338-university-of-chicago-2019-rd-results.html",
+"https://talk.collegeconfidential.com/university-chicago/1709510-university-of-chicago-class-of-2019-early-action-results-only.html",
+"https://talk.collegeconfidential.com/university-chicago/1870805-uchicago-2020-rd-results.html",
+"https://talk.collegeconfidential.com/university-chicago/1838644-uchicago-class-of-2020-early-action-results.html",
+"https://talk.collegeconfidential.com/university-chicago/1972968-uchicago-rd-2021-results-thread.html", 
+"https://talk.collegeconfidential.com/university-chicago/1964119-uchicago-class-of-2021-ed-ii-results.html",
+"https://talk.collegeconfidential.com/university-chicago/2064326-university-of-chicago-class-of-2022-rd-results.html",
+"https://talk.collegeconfidential.com/university-chicago/2036687-uchicago-class-of-2022-ea-edi-results-only.html",
+"https://talk.collegeconfidential.com/university-chicago/2057114-uchicago-class-of-2022-edii-results-only.html",
+"https://talk.collegeconfidential.com/university-chicago/2116712-uchicago-class-of-2023-ea-edi-results-only.html"
+]
+APP_ROUND_LIST = ['RD', 'EA', 'RD', 'EA', 'RD', 'EA', 'RD', 'EA', 'EA', 'EA']
+ROUND_CONV = {'EA':1, 'RD':0}
+COLLEGE_STATE_NAME = 'Illinois'
+COLLEGE_STATE_ABBR = 'IL'

@@ -1,0 +1,47 @@
+{% extends 'home_base.html' %}
+
+{% block title %}About{% endblock %} 
+
+{% block styling %}
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Merriweather:300|Montserrat:300');
+	
+	body{
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	.overview{
+		font-size: calc(0.6em + 0.9vw);
+	}
+	
+	.heading{
+		text-align:left;
+		font-size: calc(1.5em + 1.4vw);
+	}
+</style>
+{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<h1 class="heading text-center py-3">
+			About
+		</h1>
+		<div class="row">
+			<div class="col-md-6 overview">
+				<p>This service was built by two high school seniors, both of whom were affected by the selective college admissions process. Both students applied to highly selective institutions in the United States and did a lot of research to make themselves competitive for these colleges.
+					<br><br>
+					Starting with 2019, both of the founders will be studying computer science at Yale University and Northwestern University. The founders can perfectly understand and relate to what parents and students are going through as they attempt to get accepted into their dream colleges. They also realize that not everybody has tens of thousands of dollars to spend on private counseling. 
+					<br><br>
+					Thus, they decided to make this service during their senior year of high school. They used their extensive experience in software engineering and machine learning to make this easy-to-use, yet incredibly complex service (more than 3000 lines of code!). 
+					<br><br>
+					The founders hope that this service is useful for you and allows you to achieve your educational goals. 
+				</p>
+			</div>
+			<div class="col-md-6">
+				<img src="{{library_img}}" class="img-fluid" />
+				<img src="{{classroom_img}}" class="img-fluid py-4" />
+				<img src="{{book_img}}" class="img-fluid pb-3" />
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+URL_LIST = ["https://talk.collegeconfidential.com/stanford-2018/2036784-stanford-class-of-2022-rea-results-thread.html",
+            "https://talk.collegeconfidential.com/stanford-2018/2069289-stanford-class-of-2022-rd-results-thread.html",
+            "https://talk.collegeconfidential.com/stanford-university/1977925-stanford-class-of-2021-rd-results-thread.html",
+            "https://talk.collegeconfidential.com/stanford-university/1938730-stanford-class-of-2021-rea-results-thread.html",
+            "https://talk.collegeconfidential.com/stanford-university/1873356-stanford-2020-regular-decision-results-thread.html",
+            "https://talk.collegeconfidential.com/stanford-university/1833324-stanford-class-of-2020-rea-results-thread.html",
+            "https://talk.collegeconfidential.com/stanford-university/1712948-stanford-class-of-2019-rea-results-thread.html",
+            "https://talk.collegeconfidential.com/stanford-university/1757051-official-stanford-class-of-2019-rd-results-only-thread.html",
+            "https://talk.collegeconfidential.com/stanford-university/1587085-stanford-2018-rea-results-only-thread.html",
+            "https://talk.collegeconfidential.com/stanford-university/1630186-official-stanford-2018-rd-results-only-thread.html"
+            ]
+COLLEGE_STATE_NAME = 'California'
+COLLEGE_STATE_ABBR = 'CA'

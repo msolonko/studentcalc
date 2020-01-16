@@ -1,0 +1,11 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/washington-university-st-louis/1749558-wustl-rd-2019-decision-thread.html",
+"https://talk.collegeconfidential.com/washington-university-st-louis/1839656-wash-u-class-of-2020-results-only-thread.html",
+"https://talk.collegeconfidential.com/washington-university-st-louis/1837301-wustl-ed-class-of-2020.html",
+"https://talk.collegeconfidential.com/washington-university-st-louis/1944038-wash-u-2021-results-only-thread.html",
+"https://talk.collegeconfidential.com/washington-university-st-louis/1951310-class-of-2021-scholarship-discussion-results.html",
+"https://talk.collegeconfidential.com/washington-university-st-louis/2115572-washu-2023-ed-results-only-thread.html",
+"https://talk.collegeconfidential.com/washington-university-st-louis/2132218-class-of-2023-rd-results-only-washington-u-sl.html"
+]
+COLLEGE_STATE_NAME = 'Missouri'
+COLLEGE_STATE_ABBR = 'MO'

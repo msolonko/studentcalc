@@ -1,0 +1,49 @@
+{% extends 'dashboard_base.html' %}
+{% block title %}Extracurricular Analysis{% endblock %}
+{% block styling %}
+  <style>
+	 .sectionHeader{
+		font-size: calc(1.4em + 1.3vw);
+		font-family: 'Montserrat', sans-serif;
+	 }
+	 .subsectionHeader{
+		font-size: calc(0.9em + 0.9vw);
+		font-family: 'Montserrat', sans-serif;
+	 }
+	 .normal{
+		 font-size: calc(0.8em + 0.6vw);
+		 font-family: 'Montserrat', sans-serif;
+	 }
+  </style> 
+{% endblock %}
+
+{% block content %}
+    {% include 'tabs.html' %}
+	
+	<div class="container">
+		<p class="sectionHeader">Extracurricular Analysis</p>
+		<p class="subsectionHeader">Overall Competitiveness</p>
+		<p class="normal">Thank you for entering your extracurricular activities! As you have seen previously when you filled out this section, your activities qualify you for a(n) <b>{{activity_package["generic"]}}</b>. This does not specifically correspond with any particular tier of institutions, but based on your activities (including impact, leadership, time commitment, etc), you seem competitive for <b>{{activity_package["tier"]}}</b>. Keep in mind, your activities are only a part of the full equation, but they are generally regarded as one of the most important parts because they show colleges who you are outside of the classroom. As you continue high school, keep this in mind and engage in more activities and strive to do well in them!</p>
+		<br>
+		<p class="subsectionHeader">Activity Quantity</p>
+		<p class="normal">{{activity_package["count"]|safe}}</p>
+		<br>
+		<p class="subsectionHeader">Leadership</p>
+		<p class="normal">{{activity_package["leader_count"]|safe}}</p>
+		<br>
+		<p class="subsectionHeader">Impact</p>
+		<p class="normal">{{activity_package["impact_count"]|safe}}</p>
+		<br>
+		<p class="subsectionHeader">Time Commitment</p>
+		<p class="normal">{{activity_package["time"]|safe}}</p>
+		<br>
+		<p class="subsectionHeader">Most Valuable Activity</p>
+		<p class="normal">{{activity_package["best"]|safe}}</p>
+		<br>
+		<p class="subsectionHeader">Community Service</p>
+		<p class="normal">{{activity_package["volunteer"]|safe}}</p>
+		<br>
+		<p class="subsectionHeader">Activity Diversity</p>
+		<p class="normal">{{activity_package["type"]|safe}}</p>
+		</div>
+{% endblock %}

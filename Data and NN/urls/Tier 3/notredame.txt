@@ -1,0 +1,13 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/university-notre-dame/1754423-official-notre-dame-class-of-2019-rd-results.html",
+"https://talk.collegeconfidential.com/university-notre-dame/1717386-official-notre-dame-class-of-2019-rea-decisions-thread.html",
+"https://talk.collegeconfidential.com/university-notre-dame/1841226-notre-dame-ea-class-of-2020-results-thread.html",
+"https://talk.collegeconfidential.com/university-notre-dame/1870150-official-notre-dame-class-of-2020-rd-decisions-thread.html",
+"https://talk.collegeconfidential.com/university-notre-dame/1945033-official-notre-dame-regular-decision-class-of-2021-thread.html",
+"https://talk.collegeconfidential.com/university-notre-dame/1943879-official-notre-dame-class-of-2021-rea-decisions-thread.html",
+"https://talk.collegeconfidential.com/university-notre-dame/2065975-official-notre-dame-class-of-2022-rd-decisions-results-thread.html",
+"https://talk.collegeconfidential.com/university-notre-dame/2040005-official-notre-dame-class-of-2022-rea-decisions-results-thread.html",
+"https://talk.collegeconfidential.com/university-notre-dame/2115112-notre-dame-class-of-2023-rea-decisions-results-thread.html"
+]
+COLLEGE_STATE_NAME = 'Indiana'
+COLLEGE_STATE_ABBR = 'IN'

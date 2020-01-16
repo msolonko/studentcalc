@@ -1,0 +1,14 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/new-york-university/1764054-nyu-class-of-2019-rd-results.html",
+"https://talk.collegeconfidential.com/new-york-university/1715163-official-new-york-university-class-of-2019-ed-1-results.html",
+"https://talk.collegeconfidential.com/new-york-university/1750723-official-nyu-rd-class-of-2019-decisions-thread.html",
+"https://talk.collegeconfidential.com/new-york-university/1861791-official-new-york-university-class-of-2020-ed-2-results.html",
+"https://talk.collegeconfidential.com/new-york-university/1868597-nyu-rd-2020-discussion-results.html",
+"https://talk.collegeconfidential.com/new-york-university/1841254-nyu-ed1-class-of-2020-decisions.html",
+"https://talk.collegeconfidential.com/new-york-university/1946143-nyu-ed-i-2021-decisions.html",
+"https://talk.collegeconfidential.com/new-york-university/2045187-nyu-rd-class-of-2022.html",
+"https://talk.collegeconfidential.com/new-york-university/2134075-nyu-rd-class-of-2023-results-only.html",
+"https://talk.collegeconfidential.com/new-york-university/2116813-nyu-ed-ii-class-of-2023.html"
+]
+COLLEGE_STATE_NAME = 'New York'
+COLLEGE_STATE_ABBR = 'NY'

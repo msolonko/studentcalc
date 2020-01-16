@@ -1,0 +1,14 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/university-virginia/1754061-uva-class-of-2019-regular-decision-results-thread.html",
+"https://talk.collegeconfidential.com/university-virginia/1734367-uva-class-of-2019-ea-results-thread.html",
+"https://talk.collegeconfidential.com/university-virginia/1843394-uva-2020-ea-results-discussion-thread.html",
+"https://talk.collegeconfidential.com/university-virginia/1849757-university-of-virginia-early-action-results-2020.html",
+"https://talk.collegeconfidential.com/university-virginia/1958526-official-uva-2021-early-action-results-decision-thread.html",
+"https://talk.collegeconfidential.com/university-virginia/2051755-uva-ea-results-decision-thread-class-of-2022.html",
+"https://talk.collegeconfidential.com/university-virginia/2066357-uva-rd-results-decisions-class-of-2022.html",
+"https://talk.collegeconfidential.com/university-virginia/2062370-uva-class-of-2022-rd-decisions.html",
+"https://talk.collegeconfidential.com/university-virginia/2131713-uva-regular-decision-decisions-only-class-of-2023.html",
+"https://talk.collegeconfidential.com/university-virginia/2123281-uva-early-action-decisions-only-class-of-2023.html"
+]
+COLLEGE_STATE_NAME = 'Virginia'
+COLLEGE_STATE_ABBR = 'VA'

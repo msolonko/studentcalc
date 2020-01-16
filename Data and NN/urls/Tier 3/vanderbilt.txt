@@ -1,0 +1,12 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/vanderbilt-university/1754841-vanderbilt-class-of-2019-rd-results.html",
+"https://talk.collegeconfidential.com/vanderbilt-university/1742962-offical-class-of-2019-ed-results-only.html",
+"https://talk.collegeconfidential.com/vanderbilt-university/1867510-official-vanderbilt-class-of-2020-results-thread.html",
+"https://talk.collegeconfidential.com/vanderbilt-university/1839658-official-vanderbilt-2020-ed1-results-thread.html",
+"https://talk.collegeconfidential.com/vanderbilt-university/1946231-official-vanderbilt-class-of-2021-results-thread.html",
+"https://talk.collegeconfidential.com/vanderbilt-university/2057513-official-vanderbilt-class-of-2022-rd-results-thread.html",
+"https://talk.collegeconfidential.com/vanderbilt-university/2043900-vanderbilt-ed2-class-of-2022-thread.html",
+"https://talk.collegeconfidential.com/vanderbilt-university/2133693-vandy-rd-class-of-2023-results-only.html"
+]
+COLLEGE_STATE_NAME = 'Tennessee'
+COLLEGE_STATE_ABBR = 'TN'

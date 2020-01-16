@@ -1,0 +1,8 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/university-california-santa-barbara/1872774-ucsb-class-of-2020-results-discussion-page.html",
+"https://talk.collegeconfidential.com/university-southern-california/1938675-usc-class-of-2021-discussion-results-thread.html",
+"https://talk.collegeconfidential.com/university-california-santa-barbara/2038717-ucsb-admission-class-of-2022.html",
+"https://talk.collegeconfidential.com/university-california-santa-barbara/2129469-uc-santa-barbara-class-of-2023-decision-thread-stats-only.html"
+]
+COLLEGE_STATE_NAME = 'California'
+COLLEGE_STATE_ABBR = 'CA'

@@ -1,0 +1,98 @@
+{% extends 'dashboard_base.html' %}
+{% block title %}Dashboard{% endblock %}
+{% block styling %}
+  <style>
+	 .big_text{
+		font-size: calc(1.2vw + 1.2em);
+		font-weight: bold;
+	 }
+	 .small_text{
+		font-size: calc(0.6vw + 1em);
+	 }
+	 #modalText{
+	 font-size: calc(0.5vw + 0.8em);
+	 }
+  </style>
+{% endblock %}
+
+
+{% block content %}
+	
+<div class="modal" tabindex="-1" role="dialog" data-backdrop="static" id="instructionModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Hello there!</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="modalText">This is your dashboard, which will provide a high-level overview of steps you have to complete. Once you have supplied us with all the information, the analyze button will become active, and you will be able to see your results. <br><br>Please take care to supply us with accurate and complete information because this will make sure that our results are the best that they can be. We hope that this service is useful for you!<br><br>We thank you for using our program, and we wish you luck in your college application process!<br><br>Sincerely,<br><i>The Developers</i>
+		</p>
+      </div>
+      <div class="modal-footer">
+		 <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="modalCheck">
+    <label class="form-check-label" for="exampleCheck1">Don't Show Again</label>
+  </div>
+        <button type="button" class="btn btn-primary" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+	
+<div class = "container text-center">
+	<p class="big_text pt-2">Welcome, {{current_user.fname}} {{current_user.lname}}!</p>
+	<p class="small_text">Complete the three steps below to receive your evaluation and personalized guidance!</p>
+
+	<div class="card-deck my-5">
+		<div class="card" id="academicCard" style="{{'background-color: #88ff88' if current_user.stats_step}}">
+		  <img class="card-img-top" src="{{academic_img}}" alt="Card image cap">
+		  <div class="card-body">
+			<p class="card-text">Here, you will enter information about your academics and demographics. Both are crucial parts of your college application!</p>
+		  </div>
+		  <div class="card-footer"><a href="stats"><button type="button" class="btn btn-primary btn-block">{{'Update Stats' if current_user.stats_step else 'Start Step'}}</button></a></div>
+		</div>
+
+		<div class="card" id="activityCard" style="{{'background-color: #88ff88' if current_user.activity_step}}">
+		  <img class="card-img-top" src="{{activity_img}}" alt="Card image cap">
+		  <div class="card-body">
+			<p class="card-text">This section will focus on your extracurriculars, which include activities done both in and out of school.</p>
+		  </div>
+		  <div class="card-footer"><a href="activities"><button type="button" class="btn btn-primary btn-block">{{'Update Activities' if current_user.activity_step else 'Start Step'}}</button></a></div>
+		</div>
+
+		<div class="card" id="awardCard" style="{{'background-color: #88ff88' if current_user.award_step}}">
+		  <img class="card-img-top" src="{{award_img}}" alt="Card image cap">
+		  <div class="card-body">
+			<p class="card-text">This final section will evaluate any awards and recognition that you have earned in high school.</p>
+		  </div>
+		  <div class="card-footer"><a href="awards"><button type="button" class="btn btn-primary btn-block">{{'Update Awards' if current_user.award_step else 'Start Step'}}</button></a></div>
+		</div>
+	</div>
+
+	<a href="analyze"><button type="button" class="btn btn-primary btn-lg btn-block my-4" href="analyze"
+	{% if current_user.stats_step == False or current_user.activity_step == False or current_user.award_step == False %}
+		disabled
+	{% endif %}
+	>Analyze Me</button></a>
+</div>
+ 
+{% endblock %}
+
+{% block script %}
+<script>
+	if('{{current_user.show_modal|safe}}' == 'True'){ //Jinja returns a String with uppercase boolean inside
+		$('#instructionModal').modal();
+	}
+	function closeModal(){
+		$('#instructionModal').modal('hide');
+		$.ajax({
+            type: 'POST',
+            url: 'dashboard',
+            data: {check: !document.getElementById("modalCheck").checked}
+          });
+	}
+</script>
+{% endblock %}

@@ -1,0 +1,8 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/university-california-los-angeles/1753982-ucla-class-of-2019-decisions-only.html",
+"https://talk.collegeconfidential.com/university-california-los-angeles/1871389-ucla-class-of-2020-decisions-only.html",
+"https://talk.collegeconfidential.com/university-california-los-angeles/1971538-ucla-class-of-2021-admission-decisions.html",
+"https://talk.collegeconfidential.com/university-california-los-angeles/2129460-ucla-class-of-2023-decision-thread-stats-only.html"
+]
+COLLEGE_STATE_NAME = 'California'
+COLLEGE_STATE_ABBR = 'CA'

@@ -1,0 +1,15 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/georgetown-university/1758923-georgetown-university-class-of-2019-rd-results-stats.html",
+"https://talk.collegeconfidential.com/georgetown-university/1717864-class-of-2019-ea-results.html",
+"https://talk.collegeconfidential.com/georgetown-university/1874556-georgetown-rd-results-thread-class-of-2020.html",
+"https://talk.collegeconfidential.com/georgetown-university/1837952-georgetown-ea-class-of-2020-results-thread.html",
+"https://talk.collegeconfidential.com/georgetown-university/1839346-class-of-2020-ea-results.html",
+"https://talk.collegeconfidential.com/georgetown-university/1976674-georgetown-class-of-2021-rd-results.html",
+"https://talk.collegeconfidential.com/georgetown-university/1942651-georgetown-2021-ea-results.html",
+"https://talk.collegeconfidential.com/georgetown-university/1976481-georgetown-2021-rd-decisions.html",
+"https://talk.collegeconfidential.com/georgetown-university/2067556-official-georgetown-class-of-2022-rd-results.html",
+"https://talk.collegeconfidential.com/georgetown-university/2040271-georgetown-2022-ea-results.html",
+"https://talk.collegeconfidential.com/georgetown-university/2116429-georgetown-ea-results-2023.html"
+]
+COLLEGE_STATE_NAME = 'Maryland'
+COLLEGE_STATE_ABBR = 'MD'

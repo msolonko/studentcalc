@@ -1,0 +1,13 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/university-pennsylvania/2114631-penn-class-of-2023-ed-results-only.html",
+"https://talk.collegeconfidential.com/university-pennsylvania/2039187-penn-class-of-2022-ed-results-only.html",
+"https://talk.collegeconfidential.com/university-pennsylvania/1977696-upenn-class-of-2021-rd-results.html",
+"https://talk.collegeconfidential.com/university-pennsylvania/1940225-university-of-pennsylvania-ed-class-of-2021-results.html",
+"https://talk.collegeconfidential.com/university-pennsylvania/1876807-university-of-pennsylvania-rd-class-of-2020-results-thread.html",
+"https://talk.collegeconfidential.com/university-pennsylvania/1829755-university-of-pennsylvania-ed-class-of-2020-results-thread.html",
+"https://talk.collegeconfidential.com/university-pennsylvania/1742882-official-university-of-pennsylvania-class-of-2019-rd-results-only-thread.html",
+"https://talk.collegeconfidential.com/university-pennsylvania/1713628-official-university-of-pennsylvania-class-of-2019-ed-results-thread.html",
+"https://talk.collegeconfidential.com/university-pennsylvania/2115679-upenn-class-of-2023-rd.html"
+]
+COLLEGE_STATE_NAME = 'Pennsylvania'
+COLLEGE_STATE_ABBR = 'PA'

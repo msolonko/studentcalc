@@ -1,0 +1,45 @@
+{% extends 'dashboard_base.html' %}
+{% block title %}Analysis{% endblock %}
+{% block styling %}
+  <style>
+
+	 .sectionHeader{
+		font-size: calc(1.4em + 1.3vw);
+		font-family: 'Montserrat', sans-serif;
+	 }
+	 
+	 .subsectionHeader{
+		font-size: calc(0.9em + 0.9vw);
+		font-family: 'Montserrat', sans-serif;
+	 }
+	 
+	 .normal{
+		 font-size: calc(0.8em + 0.6vw);
+		 font-family: 'Montserrat', sans-serif;
+	 }
+	  
+  </style>
+{% endblock %}
+
+{% block content %}
+    {% include 'tabs.html' %}
+	<div class="container">
+		<p class="sectionHeader">Overview</p>
+		<p class="subsectionHeader">What You'll See</p>
+		<p class="normal">Thank you for completing your student profile! In the analysis section of the software, you will see a detailed evaluation of your application along with concrete and useful advice that allows you to start taking action now.
+			<br><br>
+			In this tab, you will see some general information about the tool as well as an overall "grade" that your application receives below.
+		</p>
+		<br>
+		<p class="subsectionHeader">Grade: <span class="badge badge-primary">{{grade}}</span></p>
+		<p class="normal">This grade takes into account all things on your application that are under your control, like your activities, awards, GPA, and ACT/SAT. It omits some other factors that might influence the admission decision, like what type of school you go to and your location, because those things are very difficult or impossible to change.
+			<br><br>
+			As you continue participating in more activities, improving your academics, editing essays, and receiving better letters of recommendation, watch this grade keep improving. Good luck!
+		</p>
+		<br>
+		<p class="subsectionHeader">What to do after reading through all the tabs?</p>
+		<p class="normal">
+			After seeing your chances and looking through all the recommendations, it is time to act! Open your task manager or calendar and make concrete plans. Commit them to writing. Tell your parents to keep you responsible. Whether you will set time to study for the ACT or engage in a new extracurricular activity, know that you are taking a major step toward college acceptance. And that step is using our research and data-backed tools and combining it with your talents and ambitions to become a stronger applicants and a better, more interesting person.
+		</p>
+	</div>
+{% endblock %}

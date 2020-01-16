@@ -1,0 +1,36 @@
+{% extends 'dashboard_base.html' %}
+{% block title %}Award Analysis{% endblock %}
+{% block styling %}
+  <style>
+	 .sectionHeader{
+		font-size: calc(1.4em + 1.3vw);
+		font-family: 'Montserrat', sans-serif;
+	 }
+	 .subsectionHeader{
+		font-size: calc(0.9em + 0.9vw);
+		font-family: 'Montserrat', sans-serif;
+	 }
+	 .normal{
+		 font-size: calc(0.8em + 0.6vw);
+		 font-family: 'Montserrat', sans-serif;
+	 }  
+  </style>
+{% endblock %}
+
+{% block content %}
+    {% include 'tabs.html' %}
+	<div class="container">
+		<p class="sectionHeader">Award Analysis</p>
+		<p class="subsectionHeader">Overall Competitiveness</p>
+		<p class="normal">Thank you for filling out the award section! As you have seen previously when you filled out this section, your awards qualify you for a(n) <b>{{award_package["generic"]}}</b>. This does not specifically correspond with any particular tier of institutions, but based on your awards, you seem competitive for <b>{{award_package["tier"]}}</b>. Keep in mind, your awards are only a part of the full equation, but it is a good idea to put maximum effort into each part of your application. As you progress through high school, the quantity and quality of your awards will increase.</p>
+		<br>
+		<p class="subsectionHeader">Best Award</p>
+		<p class="normal">We saw that your most significant award was <b>{{award_package["biggest"]}}</b>. That is a great achievement! We hope that you continue being distinguished in your high school career.</p>
+		<br>
+		<p class="subsectionHeader">Award Quantity</p>
+		<p class="normal">{{award_package["count"]|safe}}</p>
+		<br>
+		<p class="subsectionHeader">Anticipated Major Relevance</p>
+		<p class="normal">{{award_package["check"]|safe}}</p>
+		</div>
+{% endblock %}

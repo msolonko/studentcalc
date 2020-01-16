@@ -1,0 +1,9 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/university-southern-california/1719773-official-usc-class-of-2019-results-discussion-thread.html",
+"https://talk.collegeconfidential.com/university-southern-california/1842387-usc-class-of-2020-results-discussion-thread.html",
+"https://talk.collegeconfidential.com/university-southern-california/1938675-usc-class-of-2021-discussion-results-thread.html",
+"https://talk.collegeconfidential.com/university-southern-california/2050692-usc-class-of-2022-decisions-stats-only-thread.html",
+"https://talk.collegeconfidential.com/university-southern-california/2122705-usc-class-of-2023-decisions-stats-only-thread.html"
+]
+COLLEGE_STATE_NAME = 'California'
+COLLEGE_STATE_ABBR = 'CA'

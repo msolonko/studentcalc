@@ -1,0 +1,13 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/brown-university/1713666-brown-class-of-2019-ed-results-thread.html",
+"https://talk.collegeconfidential.com/brown-university/1752948-brown-university-rd-class-of-2019-results.html",
+"https://talk.collegeconfidential.com/brown-university/1870558-official-brown-2020-regular-decision-results-thread.html",
+"https://talk.collegeconfidential.com/brown-university/1839447-brown-class-of-2020-early-decision-results-only.html",
+"https://talk.collegeconfidential.com/brown-university/1977682-official-brown-class-of-2021-rd-results.html", 
+"https://talk.collegeconfidential.com/brown-university/1944026-official-brown-class-of-2021-ed-results-only.html",
+"https://talk.collegeconfidential.com/brown-university/2040001-brown-ed-2022-results-thread.html",
+"https://talk.collegeconfidential.com/brown-university/2115582-brown-2023-ed-results-thread.html",
+"https://talk.collegeconfidential.com/brown-university/2095781-brown-class-of-2023-applicants-discussion.html"
+]
+COLLEGE_STATE_NAME = 'Rhode Island'
+COLLEGE_STATE_ABBR = 'RI'

@@ -1,0 +1,12 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/carnegie-mellon-university/1706803-carnegie-mellon-class-of-2019-rd-discussion-and-results-thread.html",
+"https://talk.collegeconfidential.com/carnegie-mellon-university/1756750-carnegie-mellon-university-class-of-2019-rd-decision-only.html",
+"https://talk.collegeconfidential.com/carnegie-mellon-university/1840086-official-carnegie-mellon-class-of-2020-ed-results.html",
+"https://talk.collegeconfidential.com/carnegie-mellon-university/1870686-carnegie-mellon-university-class-of-2020-rd-decision-only.html",
+"https://talk.collegeconfidential.com/carnegie-mellon-university/1943729-carnegie-mellon-class-of-2021-ed-results.html",
+"https://talk.collegeconfidential.com/carnegie-mellon-university/1962791-official-carnegie-mellon-university-class-of-2021-regular-decision-results-only.html",
+"https://talk.collegeconfidential.com/carnegie-mellon-university/2069507-carnegie-mellon-regular-decision-results-class-of-2022.html",
+"https://talk.collegeconfidential.com/carnegie-mellon-university/2104611-carnegie-mellon-university-class-of-2023-ed-thread.html"
+]
+COLLEGE_STATE_NAME = 'Pennsylvania'
+COLLEGE_STATE_ABBR = 'PA'

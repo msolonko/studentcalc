@@ -1,0 +1,9 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/university-california-san-diego/1748764-ucsd-class-of-2019-decisions-discussion.html",
+"https://talk.collegeconfidential.com/university-california-san-diego/1865832-uc-san-diego-class-of-2020-decisions-thread.html",
+"https://talk.collegeconfidential.com/university-california-san-diego/1948748-ucsd-class-of-2021-discussion-decisions.html",
+"https://talk.collegeconfidential.com/university-california-san-diego/2041381-ucsd-class-of-2022.html",
+"https://talk.collegeconfidential.com/university-california-san-diego/2129465-uc-san-diego-class-of-2023-decision-thread-stats-only.html"
+]
+COLLEGE_STATE_NAME = 'California'
+COLLEGE_STATE_ABBR = 'CA'

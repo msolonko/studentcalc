@@ -1,0 +1,16 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/northwestern-university/1706068-official-northwestern-ed-class-of-2019-results.html",
+"https://talk.collegeconfidential.com/northwestern-university/1753369-official-northwestern-university-class-of-2019-rd-results-thread.html",
+"https://talk.collegeconfidential.com/northwestern-university/1840071-official-northwestern-ed-class-of-2020-results.html",
+"https://talk.collegeconfidential.com/northwestern-university/1871074-northwestern-university-class-of-2020-rd-results-thread.html",
+"https://talk.collegeconfidential.com/northwestern-university/1972933-northwestern-rd-results-class-of-2021.html",
+"https://talk.collegeconfidential.com/northwestern-university/1942957-official-northwestern-2021-ed-results-only-thread.html",
+"https://talk.collegeconfidential.com/northwestern-university/2066016-northwestern-class-of-2022-rd-results.html",
+"https://talk.collegeconfidential.com/northwestern-university/2037853-official-northwestern-2022-ed-results-only-thread-p1.html",
+"https://talk.collegeconfidential.com/northwestern-university/2132054-official-northwestern-class-of-2023-rd-results-thread.html",
+"https://talk.collegeconfidential.com/northwestern-university/2115594-northwestern-class-of-2023-ed-results-thread.html"
+]
+APP_ROUND_LIST = ['EA', 'RD', 'EA', 'RD', 'RD', 'EA', 'RD', 'EA', 'RD', 'EA']
+ROUND_CONV = {'EA':1, 'RD':0}
+COLLEGE_STATE_NAME = 'Illinois'
+COLLEGE_STATE_ABBR = 'IL'

@@ -1,0 +1,14 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/dartmouth-college/1755066-dartmouth-college-class-of-2019-rd-results.html",
+"https://talk.collegeconfidential.com/dartmouth-college/1716729-dartmouth-college-class-of-2019-ed-results.html",
+"https://talk.collegeconfidential.com/dartmouth-college/1876552-official-dartmouth-college-2020-rd-results.html",
+"https://talk.collegeconfidential.com/dartmouth-college/1836230-dartmouth-college-class-of-2020-ed-results.html",
+"https://talk.collegeconfidential.com/dartmouth-college/1977173-official-dartmouth-college-class-of-2021-regular-decision-results-only.html",
+"https://talk.collegeconfidential.com/dartmouth-college/1945416-dartmouth-class-of-2021-early-decision-results.html",
+"https://talk.collegeconfidential.com/dartmouth-college/2067109-dartmouth-class-of-2022-rd-results.html",
+"https://talk.collegeconfidential.com/dartmouth-college/2039858-dartmouth-class-of-2022-early-decision-results.html",
+"https://talk.collegeconfidential.com/dartmouth-college/2115324-dartmouth-class-of-2023-early-decision-results.html",
+"https://talk.collegeconfidential.com/dartmouth-college/2134015-dartmouth-rd-class-of-2023-results-only.html"
+]
+COLLEGE_STATE_NAME = 'New Hampshire'
+COLLEGE_STATE_ABBR = 'NH'

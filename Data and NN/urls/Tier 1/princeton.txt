@@ -1,0 +1,14 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/princeton-university/2114122-princeton-university-class-of-2023-scea-results-thread.html",
+"https://talk.collegeconfidential.com/princeton-university/2039825-princeton-university-class-of-2022-scea-results.html",
+"https://talk.collegeconfidential.com/princeton-university/2070177-official-princeton-university-class-of-2022-regular-decision-results-only.html",
+"https://talk.collegeconfidential.com/princeton-university/1962844-official-princeton-university-class-of-2021-regular-decision-results-only.html",
+"https://talk.collegeconfidential.com/princeton-university/1946109-princeton-university-class-of-2021-scea-decisions-thread.html",
+"https://talk.collegeconfidential.com/princeton-university/1876271-princeton-regular-decision-2020-results-thread.html",
+"https://talk.collegeconfidential.com/princeton-university/1831713-princeton-university-class-of-2020-scea-results.html",
+"https://talk.collegeconfidential.com/princeton-university/1752939-princeton-university-class-of-2019-rd-results.html",
+"https://talk.collegeconfidential.com/princeton-university/1713233-official-princeton-university-class-of-2019-scea-results.html",
+"https://talk.collegeconfidential.com/princeton-university/2134017-princeton-rd-class-of-2023-results-only.html"
+]
+COLLEGE_STATE_NAME = 'New Jersey'
+COLLEGE_STATE_ABBR = 'NJ'

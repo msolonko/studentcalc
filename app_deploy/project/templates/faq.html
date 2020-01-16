@@ -1,0 +1,72 @@
+{% extends 'dashboard_base.html' %}
+{% block title %}FAQ{% endblock %}
+
+{% block content %}
+<div class = "container">
+<div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          How do I use this tool?
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        To properly use this tool, a student or a parent has to fill out all three sections of the student profile: statistics, extracurriculars, and awards. After that, let the artificial intelligence do its thing and provide a useful output for you.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          How does this tool work?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        This tool takes admission data from students applying to the most selective colleges from the last five years. In total, this tool is powered by over 1700 full student profiles. This data is used to train a neural network to make predictions and output valuable recommendations to the end user. The activities and awards are analyzed by a carefully assembled formula to reflect the preferences of top college admissions.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          What do I interpret the results?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        After following all the steps, you will have access to the analysis page. The page will first give you an overall grade. This grade represents how competitive you application is overall, not for a given tier. It only looks at things you can control such as GPA and extracurriculars, among others. The grade does not take into account things that are difficult or impossible to change, like location and type of school you attend.
+        <br><br>
+        The next few tabs will analyze your profile using trained neural networks. They will tell you whether or not you are competitive for a certain tier and give you valuable feedback. The neural network determines what changes will benefit you application the most so that you know what to focus your time on.
+        <br><br>
+        Lastly, you activities and awards are analyzed. To properly make use of this tool, take a look at each section and determine if you are missing anything, like leadership or community service. Then, attempt to fix that by dedicating yourself to your favorite activities! Similarly, compete in what you are good at and get rewarded for your talent with awards!
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingFour">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Help! The output makes no sense!
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+      <div class="card-body">
+        Rarely, you will see that you are moderately competitive for a given tier and not competitive for a lower tier. This might not make intuitive sense. Although this does not happen often, no AI is perfect. It is based on real data, so the output reflects what the real data shows. Such strange output usually means that your student profile is relative unusual, so the neural network has trouble handling it. Regardless, the advice that you get under recommendations is perfectly valid and extremely useful. After following the recommendations, feel free to update your stats and see the output change!
+        <br><br>
+        Sometimes, you will get different recommendations based on each tier. The actual numbers that are being recommended for ACT, GPA, and SAT II's are based on averages from the student profiles we looked at. However, each tier might have a different output. This might be because the tiers are inherently different due to having different acceptance rates. We recommend identifying the tier you are aiming for and closely following the recommendations there before moving on to other recommendations from other tiers. Oftentimes, however, the recommendations will be very similar. 
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}

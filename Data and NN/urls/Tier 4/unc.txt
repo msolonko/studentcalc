@@ -1,0 +1,10 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/university-north-carolina-chapel-hill/1757215-unc-class-of-2019-rd-results.html",
+"https://talk.collegeconfidential.com/university-north-carolina-chapel-hill/1735864-unc-class-of-2019-ea-decision-thread.html",
+"https://talk.collegeconfidential.com/university-north-carolina-chapel-hill/1821047-unc-class-of-2020-ea-discussion-thread.html",
+"https://talk.collegeconfidential.com/university-north-carolina-chapel-hill/1959107-unc-2021-ea-results-official.html",
+"https://talk.collegeconfidential.com/university-north-carolina-chapel-hill/2052003-unc-2022-ea-results.html",
+"https://talk.collegeconfidential.com/university-north-carolina-chapel-hill/2123342-unc-2023-ea-results-thread.html"
+]
+COLLEGE_STATE_NAME = 'North Caroline'
+COLLEGE_STATE_ABBR = 'NC'

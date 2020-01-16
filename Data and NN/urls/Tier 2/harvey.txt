@@ -1,0 +1,9 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/harvey-mudd-college/1752949-official-hmc-class-of-2019-regular-decision-results-only.html",
+"https://talk.collegeconfidential.com/harvey-mudd-college/1717366-official-2019-ed-i-ii-results-thread.html",
+"https://talk.collegeconfidential.com/harvey-mudd-college/1871451-harvey-mudd-class-of-2020-results-thread.html",
+"https://talk.collegeconfidential.com/harvey-mudd-college/2040482-harvey-mudd-class-of-2022-ed1-results-thread.html",
+"https://talk.collegeconfidential.com/harvey-mudd-college/2115257-harvey-mudd-class-of-2023-ed1-result-thread.html"
+]
+COLLEGE_STATE_NAME = 'California'
+COLLEGE_STATE_ABBR = 'CA'

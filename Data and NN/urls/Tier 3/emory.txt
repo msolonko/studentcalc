@@ -1,0 +1,11 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/emory-university/1756866-emory-university-class-of-2019-rd-results.html",
+"https://talk.collegeconfidential.com/emory-university/1717359-official-emory-university-class-of-2019-ed-results.html",
+"https://talk.collegeconfidential.com/emory-university/1841379-emory-ed1-results-class-of-2020.html",
+"https://talk.collegeconfidential.com/emory-university/1876286-emory-class-of-2020-rd-results-thread.html",
+"https://talk.collegeconfidential.com/emory-university/1862085-emory-edii-class-of-2020-results-thread.html",
+"https://talk.collegeconfidential.com/emory-university/1964165-official-emory-2021-edii-results-only-thread.html",
+"https://talk.collegeconfidential.com/emory-university/2066384-emory-class-of-2022-rd-results-thread.html"
+]
+COLLEGE_STATE_NAME = 'Georgia'
+COLLEGE_STATE_ABBR = 'GA'

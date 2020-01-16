@@ -1,0 +1,11 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/georgia-institute-technology/1729605-official-georgia-tech-early-action-2019-decisions-thread.html",
+"https://talk.collegeconfidential.com/georgia-institute-technology/1869631-georgia-tech-rd-results.html",
+"https://talk.collegeconfidential.com/georgia-institute-technology/1751592-official-georgia-tech-class-of-2019-rd-decision-thread.html",
+"https://talk.collegeconfidential.com/georgia-institute-technology/1955681-georgia-tech-class-of-2021-ea-results-thread.html",
+"https://talk.collegeconfidential.com/georgia-institute-technology/2048475-georgiatech-class-of-2022-ea-results-thread.html",
+"https://talk.collegeconfidential.com/georgia-institute-technology/2127893-georgia-tech-class-of-2023-rd-discussion-results.html",
+"https://talk.collegeconfidential.com/georgia-institute-technology/2103174-georgia-tech-class-of-2023-ea-thread.html"
+]
+COLLEGE_STATE_NAME = 'Georgia'
+COLLEGE_STATE_ABBR = 'GA'

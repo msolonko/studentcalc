@@ -1,0 +1,12 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/pomona-college/1716453-pomona-stats-decisions-thread-for-the-class-of-2019.html",
+"https://talk.collegeconfidential.com/pomona-college/1839379-class-of-2020-ed-results-thread.html",
+"https://talk.collegeconfidential.com/pomona-college/1957097-official-pomona-college-class-of-2021-ed-edii-rd-results-thread.html",
+"https://talk.collegeconfidential.com/pomona-college/1957097-official-pomona-college-class-of-2021-ed-edii-rd-results-thread.html",
+"https://talk.collegeconfidential.com/pomona-college/2120585-pomona-class-of-2023-edii.html",
+"https://talk.collegeconfidential.com/pomona-college/2113844-pomona-college-class-of-2023-ed-edi-rd-results-thread.html"
+]
+APP_ROUND_LIST = ['EA', 'EA', 'RD', 'EA', 'EA', 'EA'
+ROUND_CONV = {'EA':1, 'RD':0}
+COLLEGE_STATE_NAME = 'California'
+COLLEGE_STATE_ABBR = 'CA'

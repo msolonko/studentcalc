@@ -1,0 +1,9 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/bowdoin-college/1717543-official-class-of-2019-ed-i-results.html",
+"https://talk.collegeconfidential.com/bowdoin-college/1754822-class-of-2019-official-rd-results.html",
+"https://talk.collegeconfidential.com/bowdoin-college/1957006-bowdoin-rd-2021.html",
+"https://talk.collegeconfidential.com/bowdoin-college/2131340-bowdoin-class-of-2023-rd-results.html",
+"https://talk.collegeconfidential.com/bowdoin-college/2115925-bowdoin-ed-2023-results.html"
+]
+COLLEGE_STATE_NAME = 'Maine'
+COLLEGE_STATE_ABBR = 'ME'

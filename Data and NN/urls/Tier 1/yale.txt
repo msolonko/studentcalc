@@ -1,0 +1,12 @@
+URL_LIST = ["https://talk.collegeconfidential.com/yale-university/2038993-yale-university-class-of-2022-scea-decision-results.html",
+            "https://talk.collegeconfidential.com/yale-university/2115024-yale-university-class-of-2023-scea-decision-result.html",
+            "https://talk.collegeconfidential.com/yale-university/2070184-yale-university-class-of-2022-regular-decision-results-only.html",
+            "https://talk.collegeconfidential.com/yale-university/1939888-yale-university-class-of-2021-scea-results.html",
+            "https://talk.collegeconfidential.com/yale-university/1872256-yale-university-class-of-2020-rd-results.html",
+            "https://talk.collegeconfidential.com/yale-university/1829684-yale-university-class-of-2020-scea-results.html",
+            "https://talk.collegeconfidential.com/yale-university/1713050-yale-class-of-2019-scea-decisions.html",
+            "https://talk.collegeconfidential.com/yale-university/1752938-yale-university-class-of-2019-rd-results.html",
+            "https://talk.collegeconfidential.com/yale-university/1629434-official-yale-class-of-2018-rd-results-thread.html",
+	    "https://talk.collegeconfidential.com/yale-university/2134398-yale-rd-2023-results-only.html"]
+COLLEGE_STATE_NAME = 'Connecticut'
+COLLEGE_STATE_ABBR = 'CT'

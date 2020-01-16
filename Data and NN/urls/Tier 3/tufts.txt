@@ -1,0 +1,12 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/tufts-university/1719148-official-tufts-university-class-of-2019-ed1-decision-thread.html",
+"https://talk.collegeconfidential.com/tufts-university/1876660-tufts-class-of-2020-rd-results-thread.html",
+"https://talk.collegeconfidential.com/tufts-university/1860732-tufts-edii-class-of-2020-results.html",
+"https://talk.collegeconfidential.com/tufts-university/1970678-tufts-class-of-2021-rd-results.html",
+"https://talk.collegeconfidential.com/tufts-university/1943713-tufts-class-of-2021-ed-results.html",
+"https://talk.collegeconfidential.com/tufts-university/2068756-tufts-class-of-2022-rd-results-only.html",
+"https://talk.collegeconfidential.com/tufts-university/2038499-tufts-class-of-2022-ed-results.html",
+"https://talk.collegeconfidential.com/tufts-university/2115531-tufts-ed-class-of-2023-results-only.html"
+]
+COLLEGE_STATE_NAME = 'Massachusetts'
+COLLEGE_STATE_ABBR = 'MA'

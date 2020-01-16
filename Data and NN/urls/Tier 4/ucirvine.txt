@@ -1,0 +1,9 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/university-california-irvine/1741774-uc-irvine-class-of-2019-admissions-results-stats-discussion.html",
+"https://talk.collegeconfidential.com/university-california-irvine/1862532-uc-irvine-class-of-2020-admissions-results-stats-discussion.html",
+"https://talk.collegeconfidential.com/university-california-irvine/1963951-uci-results-thread-2021.html",
+"https://talk.collegeconfidential.com/university-california-irvine/2051107-uc-irvine-class-of-2022-applicants.html",
+"https://talk.collegeconfidential.com/university-california-irvine/2129468-uc-irvine-class-of-2023-decision-thread-stats-only.html"
+]
+COLLEGE_STATE_NAME = 'California'
+COLLEGE_STATE_ABBR = 'CA'

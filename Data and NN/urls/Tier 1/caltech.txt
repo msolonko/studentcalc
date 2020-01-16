@@ -1,0 +1,11 @@
+URL_LIST = ["https://talk.collegeconfidential.com/california-institute-technology/2114552-caltech-2023-ea-results.html",
+"https://talk.collegeconfidential.com/california-institute-technology/2038749-official-caltech-2022-ea-results.html",
+"https://talk.collegeconfidential.com/california-institute-technology/2062434-official-caltech-2022-ra-results.html",
+"https://talk.collegeconfidential.com/california-institute-technology/1970814-caltech-2021-rd-results-thread.html",
+"https://talk.collegeconfidential.com/california-institute-technology/1943946-official-caltech-class-of-2021-ea-results-thread.html",
+"https://talk.collegeconfidential.com/california-institute-technology/1840314-caltech-class-of-2020-ea-results-thread.html",
+"https://talk.collegeconfidential.com/california-institute-technology/1715300-official-caltech-class-of-2019-ea-results-thread.html",
+"https://talk.collegeconfidential.com/california-institute-technology/2128153-caltech-rd-2023-applicants-results-deferred-applicants-results.html"
+]
+COLLEGE_STATE_NAME = 'California'
+COLLEGE_STATE_ABBR = 'CA'

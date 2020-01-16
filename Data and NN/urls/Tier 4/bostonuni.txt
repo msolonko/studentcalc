@@ -1,0 +1,12 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/boston-university/1871655-bu-rd-2020-decisions-only.html",
+"https://talk.collegeconfidential.com/boston-university/1842078-boston-university-ed-2-class-of-2020-applicants.html",
+"https://talk.collegeconfidential.com/boston-university/1973043-bu-class-of-2021-rd-decisions.html",
+"https://talk.collegeconfidential.com/boston-university/1926551-boston-university-early-decision-class-of-2021-thread.html",
+"https://talk.collegeconfidential.com/boston-university/2039156-bu-rd-class-of-2022.html",
+"https://talk.collegeconfidential.com/boston-university/2044212-regular-decision-class-of-2022.html",
+"https://talk.collegeconfidential.com/boston-university/2114740-boston-university-2023-ed-results.html",
+"https://talk.collegeconfidential.com/boston-university/2116033-boston-university-rd-2023.html"
+]
+COLLEGE_STATE_NAME = 'Massachusetts'
+COLLEGE_STATE_ABBR = 'MA'

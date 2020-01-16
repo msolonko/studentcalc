@@ -1,0 +1,12 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/claremont-mckenna-college/1756488-claremont-mckenna-class-of-2019-official-results-thread.html",
+"https://talk.collegeconfidential.com/claremont-mckenna-college/1715234-official-ed1-results-class-of-2019.html",
+"https://talk.collegeconfidential.com/claremont-mckenna-college/1841884-claremont-mckenna-2020-decisions-thread.html",
+"https://talk.collegeconfidential.com/claremont-mckenna-college/1968461-cmc-rd-class-of-2021-discussion-results-thread.html",
+"https://talk.collegeconfidential.com/claremont-mckenna-college/1964135-cmc-ed2-class-of-2021-results-thread.html",
+"https://talk.collegeconfidential.com/claremont-mckenna-college/2061152-cmc-class-of-2022-rd-applicants-thread.html",
+"https://talk.collegeconfidential.com/claremont-mckenna-college/2108627-cmc-ed-1-class-of-2023.html",
+"https://talk.collegeconfidential.com/claremont-mckenna-college/2129998-claremont-mckenna-rd-2023.html"
+]
+COLLEGE_STATE_NAME = 'California'
+COLLEGE_STATE_ABBR = 'CA'

@@ -1,0 +1,41 @@
+{% extends 'dashboard_base.html' %}
+{% block title %}Tier Analysis{% endblock %}
+{% block styling %}
+  <style>
+	 .sectionHeader{
+		font-size: calc(1.4em + 1.3vw);
+		font-family: 'Montserrat', sans-serif;
+	 }
+	 
+	 .normal{
+		 font-size: calc(0.8em + 0.6vw);
+		 font-family: 'Montserrat', sans-serif;
+	 }
+	 
+	 .subsectionHeader{
+		font-size: calc(0.9em + 0.9vw);
+		font-family: 'Montserrat', sans-serif;
+	 }
+    </style>
+
+{% endblock %}	  
+
+{% block content %}
+    {% include 'tabs.html' %}
+	<div class="container">
+		<p class="sectionHeader">{{tier_package["tier"]}}</p>
+		<p class="subsectionHeader">Evaluation</p>
+		<p class="normal">Based on the demographic and statistical information you entered, you are <b>{{tier_package["competitive"]}}</b> for this tier of institutions. In other words, you have a <b>{{tier_package["otherWords"]}}</b> of being accepted to this tier of institutions, based on a machine-learning comparison of your information to hundreds of student profiles from previous years.</p>
+		<br>
+		<p class="subsectionHeader">Recommendations</p>
+		<p class="normal">Our computer program generated personalized recommendations for <i>your unique</i> profile to help you have the strongest college application possible. Here are your recommendation(s):</p>
+		<ol class="normal">
+		{% for i in range(tier_package["advice"]|length)%}
+			<li>{{tier_package["advice"][i]|safe}}</li>
+		{% endfor %}
+		</ol>
+		<br>
+		<p class="subsectionHeader">About This Tier</p>
+		<p class="normal">{{tier_package["colleges"]|safe}} Regardless of your result, remember that our program is not perfect, and your experience may be different. Still, our algorithm made a list of recommendations for you on how you can strengthen your profile below.</p>
+		</div>	
+{% endblock %}	

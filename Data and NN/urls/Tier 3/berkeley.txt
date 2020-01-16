@@ -1,0 +1,9 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/university-california-berkeley/1756889-uc-berkeley-class-of-2019-decision-stats-only.html",
+"https://talk.collegeconfidential.com/university-california-berkeley/1860923-uc-berkeley-class-of-2020-results-thread.html",
+"https://talk.collegeconfidential.com/university-california-berkeley/1962787-uc-berkeley-class-of-2021-results-thread.html",
+"https://talk.collegeconfidential.com/university-california-berkeley/2035401-uc-berkeley-class-of-2022-applicants-thread.html",
+"https://talk.collegeconfidential.com/university-california-berkeley/2129467-uc-berkeley-class-of-2023-decision-thread-stats-only.html"
+]
+COLLEGE_STATE_NAME = 'California'
+COLLEGE_STATE_ABBR = 'CA'

@@ -1,0 +1,12 @@
+URL_LIST = ["https://talk.collegeconfidential.com/harvard-university/2115368-harvard-scea-2023-results.html",
+"https://talk.collegeconfidential.com/harvard-university/2039011-harvard-university-class-of-2022-scea-results.html",
+"https://talk.collegeconfidential.com/harvard-university/2041489-harvard-university-class-of-2022-rd-thread.html",
+"https://talk.collegeconfidential.com/harvard-university/1939648-harvard-class-of-2021-scea-results-only-thread.html",
+"https://talk.collegeconfidential.com/harvard-university/1962932-harvard-class-of-2021-regular-decision-results-only.html",
+"https://talk.collegeconfidential.com/harvard-university/1865655-harvard-rd-class-of-2020-result-thread.html",
+"https://talk.collegeconfidential.com/harvard-university/1838690-official-harvard-university-class-of-2020-scea-decisions.html",
+"https://talk.collegeconfidential.com/harvard-university/1752941-harvard-university-class-of-2019-rd-results.html",
+"https://talk.collegeconfidential.com/harvard-university/1714730-official-harvard-university-2019-scea-decisions-only.html"
+]
+COLLEGE_STATE_NAME = 'Massachusetts'
+COLLEGE_STATE_ABBR = 'MA'

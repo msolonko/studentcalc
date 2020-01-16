@@ -1,0 +1,15 @@
+URL_LIST = ["https://talk.collegeconfidential.com/university-michigan-ann-arbor/2117611-university-of-michigan-class-of-2023-ea-results-thread.html",
+            "https://talk.collegeconfidential.com/university-michigan-ann-arbor/1840250-michigan-ea-class-of-2020-results-thread.html",
+            "https://talk.collegeconfidential.com/university-michigan-ann-arbor/1858738-university-of-michigan-regular-decision-class-of-2020-results-thread.html",
+            "https://talk.collegeconfidential.com/university-michigan-ann-arbor/1941695-umichigan-ann-arbor-class-of-2021-results-only.html",
+            "https://talk.collegeconfidential.com/university-michigan-ann-arbor/1960631-umich-ann-arbor-class-of-2021-rd.html",
+            "https://talk.collegeconfidential.com/university-michigan-ann-arbor/2047203-university-of-michigan-regular-decision-class-of-2022.html",
+            "https://talk.collegeconfidential.com/university-michigan-ann-arbor/1578190-official-class-of-2018-university-of-michigan-ea-decisions-thread.html",
+            "https://talk.collegeconfidential.com/university-michigan-ann-arbor/1589223-official-university-of-michigan-class-of-2018-ea-results-thread-stats-only.html",
+            "https://talk.collegeconfidential.com/university-michigan-ann-arbor/1704751-official-class-of-2019-university-of-michigan-ea-decisions-thread.html",
+            "https://talk.collegeconfidential.com/university-michigan-ann-arbor/1721049-class-of-2019-university-of-michigan-ea-results-thread-stats.html",
+	    "https://talk.collegeconfidential.com/university-michigan-ann-arbor/2117016-university-of-michigan-class-of-2023-regular-decision.html"
+]
+
+COLLEGE_STATE_NAME = 'Michigan'
+COLLEGE_STATE_ABBR = 'MI'

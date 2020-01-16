@@ -1,0 +1,7 @@
+URL_LIST = [
+"https://talk.collegeconfidential.com/wake-forest-university/1975382-wake-forest-class-of-2021-regular-decision-results-only.html",
+"https://talk.collegeconfidential.com/wake-forest-university/1951199-wake-forest-regular-decision-thread.html",
+"https://talk.collegeconfidential.com/wake-forest-university/2120762-wake-forest-2023-ed-2.html"
+]
+COLLEGE_STATE_NAME = 'North Carolina'
+COLLEGE_STATE_ABBR = 'NC'
